@@ -7,14 +7,14 @@ int main(void)
     
     /* Array syntax for defining an array */
     int array_size = 10;
-    int array[array_size];
+    float array[array_size];
     /* End array syntax declaration */
 
     /* Explicit memory allocation for defining the same array */
     
     // Allocate a block of array_size integers and assign the address
     // of the beginning of the memory block to the pointer memblock
-    int *memblock = malloc(array_size * sizeof(int));
+    long double *memblock = malloc(array_size * sizeof(long double));
     /* WARNING: malloc may fail and return a NULL value for the pointer
                 Good programming practice mandates checking for such failures.
     */
@@ -52,7 +52,7 @@ int main(void)
         printf("array[%d] : %d\t", i, array[i]);
         
         // print values contained in each memory address starting at memblock 
-        printf("*(memblock + %d) : %d\t", i, *(memblock+i));
+        printf("*(memblock + %d) : %LG\t", i, *(memblock+i));
         
         // print each character in the string using array syntax
         printf("foo[%d] : %c\t", i, foo[i]);
