@@ -1,69 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define glbArrSize 10 //array size
+
+//the array set to static because its address will be used in setting and printing functions
+static float glbArray[10]; 
+
+
+void print_arrays(void) 
+{
+    int i;
+
+    for (i=0; i < glbArrSize; i++)
+    {
+        printf("array[%d]=%f\n", i, *(glbArray+i));
+    }
+    return;
+}
+
+void set_arrays(void)
+{
+    int i;
+    
+    for (i=0; i < glbArrSize; i++)
+    {
+        // set the value inside the memory address at memblock + (i bytes) to i
+        //*(memblock+i) = i;
+        glbArray[i] = i;
+    }
+}
 
 int main(void)
 {
-    int i; // Iteration index
-    
-    /* Array syntax for defining an array */
-    int array_size = 10;
-    float array[array_size];
-    /* End array syntax declaration */
+  //  float *mem;
 
-    /* Explicit memory allocation for defining the same array */
+    set_arrays();
+    print_arrays();
     
-    // Allocate a block of array_size integers and assign the address
-    // of the beginning of the memory block to the pointer memblock
-    long double *memblock = malloc(array_size * sizeof(long double));
-    /* WARNING: malloc may fail and return a NULL value for the pointer
-                Good programming practice mandates checking for such failures.
-    */
-    if (NULL == memblock) {
-      // Print to the "file" of standard error, rather than standard out
-      fprintf(stderr, "malloc failed\n");
-      // Return a non-successful integer
-      return -1;
-    }
-
-    /* End explicit memory allocation declaration */
-    
-    /* String example showing the two methods are equivalent */
-    // constant character array (i.e., a string)
-    const char *foo = "Foo bar .";
-    /* End string declaration as array of characters */
-    
-    /* Fill declared arrays with integers */
-    for (i=0; i < array_size; i++)
-    {
-        // assign the value i to the ith element 
-        array[i] = i;
-        
-        // set the value inside the memory address at memblock + (i bytes) to i
-        *(memblock+i) = i;
-    }
-    /* End fill with integers */
-
-    /* Print out results to verify exactly what the above code did */
-
-    // Note: this increments three bytes BEYOND the allocated memory (buffer overrun)
-    for (i=0; i < (array_size + 3); i++)
-    {
-        // print the array values using array syntax
-        printf("array[%d] : %d\t", i, array[i]);
-        
-        // print values contained in each memory address starting at memblock 
-        printf("*(memblock + %d) : %LG\t", i, *(memblock+i));
-        
-        // print each character in the string using array syntax
-        printf("foo[%d] : %c\t", i, foo[i]);
-        
-        // do the same thing as above, but in memory pointer notation
-        printf("*(foo + %d) : %c\n", i, *(foo+i));
-    }
-    
-    // explicitly free the block of memory malloc-ed at memblock 
-    free(memblock);
-
-    // memory not explicitly freed is automatically freed on function exit
+   
     return 0;
 }
+
