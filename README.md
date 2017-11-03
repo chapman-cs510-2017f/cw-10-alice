@@ -2,7 +2,7 @@
 
 **Author(s):** **CHANGEME**
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-10-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-10-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-10-alice-sharon-jet.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-10-alice-sharon-jet)
 
 ## Specification
 
@@ -40,7 +40,7 @@ Complete the following exercises, saving your solutions in the indicated files.
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+*pointer is hard and easy to make mistake.
 
 ## Honor Pledge
 
@@ -51,4 +51,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAME**
+**Jet, Alice, Sharon**
