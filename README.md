@@ -1,6 +1,6 @@
 # CS510 CW 10
 
-**Author(s):** **CHANGEME**
+**Author(s):** **Sharon, Jet, Alice**
 
 [![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-10-alice-sharon-jet.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-10-alice-sharon-jet)
 
@@ -40,7 +40,7 @@ Complete the following exercises, saving your solutions in the indicated files.
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-*pointer is hard and easy to make mistake.
+*pointer is hard and easy to make mistake. This classwork also helped with figuring out how vectors are named within c, and how you can "pass by value" and "pass by reference". Sometimes it may be more useful to pass by value instead of pass by reference.
 
 ## Honor Pledge
 
