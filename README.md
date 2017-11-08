@@ -40,7 +40,7 @@ Complete the following exercises, saving your solutions in the indicated files.
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-*pointer is hard and easy to make mistake. This classwork also helped with figuring out how vectors are named within c, and how you can "pass by value" and "pass by reference". Sometimes it may be more useful to pass by value instead of pass by reference.
+It was helpful in understanding how C really lets you have fine control over memory management using pointers, but also dangerous in that it can be easily mis-managed, and how important tracking types is. This classwork also helped with figuring out how vectors are named within c, and how you can "pass by value" and "pass by reference". Sometimes it may be more useful to pass by value instead of pass by reference.
 
 ## Honor Pledge
 
